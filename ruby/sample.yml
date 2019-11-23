@@ -1,0 +1,103 @@
+# 改行コードはunix系にする
+---
+# emails
+- hoge@gmail.com
+- yumemo@gmail.com
+
+---
+# scalar_data(block style)
+- yumemo # str
+- 555 # int
+- true # bool
+- null # null
+- 2090-55-00 # date
+- "true" # str
+- '777'
+
+---
+# sequence
+- [yumemo, 555, true, null, 2090-55-00, "true", '777']
+
+-
+  - b-1
+  - b-2
+- c
+
+---
+# hash data
+name : yumemo
+score: 50
+
+names1:
+  - yumemo
+  - neko
+scores1:
+  - 50
+  - 80
+
+names2: [yumemo, neko]
+scores2: [50, 80]
+
+---
+# 改行・スペースの表現
+
+## 各行に改行
+- |
+  this
+  is
+  a
+  pen
+
+## 各行に改行+最終行
+- |+
+  this
+  is
+  a
+  pen
+
+## 各行に改行-最終行
+- |-
+  this
+  is
+  a
+  pen
+
+
+# スペースの表現
+- >
+  this
+  is
+  a
+  pen
+
+
+- >+
+  this
+  is
+  a
+  pen
+
+- >-
+  this
+  is
+  a
+  pen
+
+---
+- &y yumemo # anchor
+- *y # alias
+- &x mr.x
+- *x
+
+---
+common: &common
+  user: yumemo
+  passwd: hogehoge
+
+development:
+  database: yumemodb
+  <<: *common
+
+production:
+  database: mydb
+  <<: *common

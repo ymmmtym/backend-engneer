@@ -1,0 +1,69 @@
+*> 見出し部:必ず書く必要あり、プログラムIDを記載
+IDENTIFICATION DIVISION.
+PROGRAM-ID. HELLO.
+
+*> 環境部：省略可能、コンピュータの実行環境や入出力ファイルなどを記載
+ENVIRONMENT DIVISION.
+
+*> データ部：入出力ファイルの情報や変数の定義、FILLERは後で設定するために前もって作成しておくもの
+DATA DIVISION.
+  WORKING-STORAGE SECTION.
+   01 MY-DATA1 PIC X(20).
+   01 MY-DATA2 PIC 9(5).
+   01 MY-DATA3 PIC 9(5)V9(2) VALUE 1432.43.
+   01 MY-COLORS.
+    03 MY-COLOR OCCURS 3 PIC X(10).
+   01 MY-PRODUCT.
+    03 PRODUCT-ID PIC X(5).
+    03 FILLER PIC X(3).
+    03 PRODUCT-PRICE PIC 9(5).
+   01 MY-NAME PIC X(10).
+   01 MY-NUMBER PIC 9(3).
+   01 MY-SIGNAL PIC X(5).
+
+*> 手続き部：セクションを作る、実際の命令を行う
+PROCEDURE DIVISION.
+  MAIN SECTION.
+    DISPLAY "What's your name? ".
+    ACCEPT MY-NAME.
+    DISPLAY "Hello! " MY-NAME.
+    MOVE "ID-12" TO PRODUCT-ID.
+    MOVE 120 TO PRODUCT-PRICE.
+    MOVE "RED" TO MY-COLOR(1).
+    MOVE "BLUE" TO MY-COLOR(2).
+    MOVE "GREEN" TO MY-COLOR(3).
+    MOVE 23 TO MY-NUMBER.
+    DISPLAY MY-COLORS.
+    DISPLAY MY-COLOR(2).
+    *> MOVE 123.43 TO MY-DATA3.
+    *> DISPLAY MY-DATA1.
+    *> DISPLAY MY-DATA2.
+    *> DISPLAY MY-DATA3.
+    DISPLAY PRODUCT-ID.
+    DISPLAY PRODUCT-PRICE.
+    DISPLAY MY-PRODUCT.
+    IF MY-NUMBER < 30 THEN
+      DISPLAY "You are young! "
+    ELSE
+      DISPLAY "You are old! "
+    END-IF.
+    *> =, IS EQUAL TO
+    *> NOT =, IS NOT EQUAL TO
+    *> 否定形にはNOTを加える
+    *> >, IS GREATER THAN
+    *> >=, IS GREATER THAN OR EQUAL TO
+    *> <, IS LESS THAN
+    *> <=, IS LESS THAN OR EQUAL TO
+    MOVE "blue" TO MY-SIGNAL
+    EVALUATE MY-SIGNAL
+      WHEN "red"
+        DISPLAY "STOP!"
+      WHEN "blue"
+      WHEN "green"
+        DISPLAY "GO!"
+      WHEN "yellow"
+        DISPLAY "CAUTION!"
+      WHEN OTHER
+        DISPLAY "WRONG SIGNAL"
+    END-EVALUATE.
+    STOP RUN.
