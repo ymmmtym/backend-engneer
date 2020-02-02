@@ -1,13 +1,25 @@
-# VM init for CentOS 7
-## local machine
+# Linux
+## Makefile
+ex)
 
-### copy private key
+```Makefile
+makemigrations:
+    docker-compose run --rm web python3 manage.py makemigrations
+
+migrate:
+    docker-compose run --rm web python3 manage.py migrate
+
+createsuperuser:
+    docker-compose run --rm web python3 manage.py createsuperuser
+```
+
+## VM init for CentOS 7
+### Copy private key from local machine
 ```
 scp ~/.ssh/id_rsa ${target_machine}:~/.ssh/
 ```
 
-## VM (Cent OS)
-### set swap
+### setting swap
 ```
 sudo dd if=/dev/zero of=/swapfile bs=1M count=1024
 sudo chmod 600 /swapfile
@@ -19,4 +31,30 @@ sudo sed -i '$ a /swapfile                                 swap                 
 ### update yum repository
 ```
 sudo yum update
+```
+
+## Other
+show hardware info
+
+```
+dmidecode
+```
+
+grep without reg exspression
+
+```
+grep -F 'hoge' sample.txt
+fgrep 'hoge' sample.txt
+```
+
+vimdiff
+- do
+- dp
+- :wqa
+- :xa
+
+tree
+
+```
+tree  --charset=C
 ```

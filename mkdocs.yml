@@ -7,3 +7,5 @@ nav:
     - 'Linux': 'linux'
     - 'Git': 'git'
     - 'Docker': 'docker'
+    - 'Openstack': 'openstack'
+    - 'Python': 'python'
