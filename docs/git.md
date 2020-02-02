@@ -1,0 +1,44 @@
+# Git
+## branch model
+gitlab-flow
+
+- master(default、正常性確認)
+- feature/hotfix
+- pre-production(検証環境)
+- production
+
+## opetation
+### init
+
+```
+git checkout master
+git branch production
+git push -u origin production
+```
+
+### commit
+
+```
+git checkout master
+git pull
+git checkout -b feature/hoge
+
+git add .
+git commit -m "${commit_msg}"
+git push origin feature/hoge
+
+git checkout master
+git branch -d feature/hoge
+
+# same procedure for hotfix
+```
+
+### edit commit
+
+```
+git reset --hard HEAD^
+git rebase -i ${commit_id}
+```
+
+
+https://www.google.com/amp/s/www.tam-tam.co.jp/tipsnote/program/post16686.html/amp
