@@ -4,14 +4,14 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="None">
         
         
-        <link rel="shortcut icon" href="img/favicon.ico">
-        <title>Backend Engneer</title>
-        <link href="css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="css/font-awesome.min.css" rel="stylesheet">
-        <link href="css/base.css" rel="stylesheet">
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Openstack - Backend Engneer</title>
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -19,13 +19,13 @@
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
 
-        <script src="js/jquery-1.10.2.min.js" defer></script>
-        <script src="js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap-3.0.3.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
 
-    <body class="homepage">
+    <body>
 
         <div class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container">
@@ -39,38 +39,38 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href=".">Backend Engneer</a>
+                    <a class="navbar-brand" href="..">Backend Engneer</a>
                 </div>
 
                 <!-- Expanded navigation -->
                 <div class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
-                            <li class="active">
-                                <a href=".">Home</a>
+                            <li >
+                                <a href="..">Home</a>
                             </li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Table of contents <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li >
-    <a href="linux">Linux</a>
+    <a href="../linux">Linux</a>
 </li>
                                     
 <li >
-    <a href="git">Git</a>
+    <a href="../git">Git</a>
 </li>
                                     
 <li >
-    <a href="docker">Docker</a>
+    <a href="../docker">Docker</a>
 </li>
                                     
 <li >
-    <a href="openstack">Openstack</a>
+    <a href=".">Openstack</a>
 </li>
                                     
 <li >
-    <a href="python">Python</a>
+    <a href="../python">Python</a>
 </li>
                                 </ul>
                             </li>
@@ -90,13 +90,25 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#welcome-to-backend-engneer-site">Welcome to Backend Engneer Site</a></li>
+        <li class="main active"><a href="#openstack">Openstack</a></li>
+            <li><a href="#show-uploaded-image-list">show uploaded image list</a></li>
+            <li><a href="#create-user">create user</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="welcome-to-backend-engneer-site">Welcome to Backend Engneer Site</h1>
-<p>This site describes the technology and knowledge for backend engneer.</p></div>
+<h1 id="openstack">Openstack</h1>
+<h2 id="show-uploaded-image-list">show uploaded image list</h2>
+<pre><code>openstack image list
+cinder image-list
+</code></pre>
+
+<h2 id="create-user">create user</h2>
+<pre><code>openstack user create opcel
+openstack user set --password secret opcel
+openstack project create proj01
+openstack role add --user opcel --project proj01 member
+</code></pre></div>
         </div>
 
         <footer class="col-md-12">
@@ -104,11 +116,11 @@
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script>
-            var base_url = ".",
+            var base_url = "..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="js/base.js" defer></script>
-        <script src="search/main.js" defer></script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
     <div class="modal-dialog">
@@ -176,8 +188,3 @@
 
     </body>
 </html>
-
-<!--
-MkDocs version : 1.0.4
-Build Date UTC : 2020-02-02 16:35:35
--->

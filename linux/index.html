@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>VM init for CentOS 7 - Backend Engneer</title>
+        <title>Linux - Backend Engneer</title>
         <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
@@ -64,6 +64,14 @@
 <li >
     <a href="../docker">Docker</a>
 </li>
+                                    
+<li >
+    <a href="../openstack">Openstack</a>
+</li>
+                                    
+<li >
+    <a href="../python">Python</a>
+</li>
                                 </ul>
                             </li>
                         </ul>
@@ -82,21 +90,33 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#vm-init-for-centos-7">VM init for CentOS 7</a></li>
-            <li><a href="#local-machine">local machine</a></li>
-            <li><a href="#vm-cent-os">VM (Cent OS)</a></li>
+        <li class="main active"><a href="#linux">Linux</a></li>
+            <li><a href="#makefile">Makefile</a></li>
+            <li><a href="#vm-init-for-centos-7">VM init for CentOS 7</a></li>
+            <li><a href="#other">Other</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="vm-init-for-centos-7">VM init for CentOS 7</h1>
-<h2 id="local-machine">local machine</h2>
-<h3 id="copy-private-key">copy private key</h3>
+<h1 id="linux">Linux</h1>
+<h2 id="makefile">Makefile</h2>
+<p>ex)</p>
+<pre><code class="Makefile">makemigrations:
+    docker-compose run --rm web python3 manage.py makemigrations
+
+migrate:
+    docker-compose run --rm web python3 manage.py migrate
+
+createsuperuser:
+    docker-compose run --rm web python3 manage.py createsuperuser
+</code></pre>
+
+<h2 id="vm-init-for-centos-7">VM init for CentOS 7</h2>
+<h3 id="copy-private-key-from-local-machine">Copy private key from local machine</h3>
 <pre><code>scp ~/.ssh/id_rsa ${target_machine}:~/.ssh/
 </code></pre>
 
-<h2 id="vm-cent-os">VM (Cent OS)</h2>
-<h3 id="set-swap">set swap</h3>
+<h3 id="setting-swap">setting swap</h3>
 <pre><code>sudo dd if=/dev/zero of=/swapfile bs=1M count=1024
 sudo chmod 600 /swapfile
 sudo mkswap /swapfile
@@ -106,6 +126,25 @@ sudo sed -i '$ a /swapfile                                 swap                 
 
 <h3 id="update-yum-repository">update yum repository</h3>
 <pre><code>sudo yum update
+</code></pre>
+
+<h2 id="other">Other</h2>
+<p>show hardware info</p>
+<pre><code>dmidecode
+</code></pre>
+
+<p>grep without reg exspression</p>
+<pre><code>grep -F 'hoge' sample.txt
+fgrep 'hoge' sample.txt
+</code></pre>
+
+<p>vimdiff
+- do
+- dp
+- :wqa
+- :xa</p>
+<p>tree</p>
+<pre><code>tree  --charset=C
 </code></pre></div>
         </div>
 
