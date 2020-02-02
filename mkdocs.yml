@@ -1,1 +1,8 @@
-site_name: My Docs
+site_name: 'Backend Engneer'
+
+nav:
+  - 'Home': 'index.md'
+
+  - 'Table of contents':
+      - 'Docker': 'docker.md'
+      - 'Linux': 'gcp_free_vm_init'
