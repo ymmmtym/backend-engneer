@@ -1,5 +1,6 @@
 # Docker
-## install for centos
+## Install for centos
+**Install docker**
 ```
 sudo yum -y update
 sudo yum -y install git docker docker-compose
@@ -8,45 +9,36 @@ sudo gpasswd -a ${USER} docker
 sudo systemctl restart docker
 ```
 
-### init setting
-delete sudo authority for docker cmd
+### Init setting
+**delete sudo authority for docker cmd**
 ```
 sudo groupadd docker
-sudo gpasswd -a $USER docker
-
-exit
+sudo gpasswd -a ${USER} docker
 ```
 
 ## Commands
-copy
+**copy**
 ```
-docker cp ${container_id}:${dir} ${output_dir}
-```
-
-prune unused containers and images
-```
-docker system prune
+docker cp -r ${container_id}:${input} ${output}
 ```
 
-run with mounting volumes
-
+**run with mounting volumes**
 ```
-docker run -v /home/hoge/shared:/shared -d -i -t ubuntu /bin/bash
+docker run -v /home/hoge/shared:/shared -d -it ubuntu /bin/bash
 ```
 
-show `<none>` images
+**show `<none>` images**
 
 ```
 docker images -f "dangling=true"
 ```
 
-build with tag
+**build with tag**
 ```
 docker build -t ${USER}/${tagname} .
 ```
 
-delete
-
+**delete**
 ```
 docker container prune
 docker volume prune
@@ -55,23 +47,26 @@ docker network prune
 docker system prune --volumes
 ```
 
-tag
-
+**tag**
 ```
-docker pull ${USER}/image
-docker tag ${USER}/image ${USER}/image:1.0
-docker push ${USER}/image:1.0
+docker pull ${USER}/${image}
+docker tag ${USER}/${image} ${USER}/${image}:${tag}
+docker push ${USER}/${image}:${tag}
 ```
 
-### terraform
+## Terraform
 
+**Use docker image**
 ```
 docker run -it -v $PWD:/app -w /app hashicorp/terraform apply
 ```
 
-## dockerhub
-If the github repository has Dockerfile, the image automatelly is built on dockerhub
+## Dockerhub
+1. puth image to dockerhub
+2. connect to github
+3. setting automated build
 
-### WORKDIR
-default is /
+
+## Dockerfile
+default directory is /
 If workdir not exist, created automatelly.
