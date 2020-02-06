@@ -91,15 +91,18 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
         <li class="main active"><a href="#docker">Docker</a></li>
-            <li><a href="#install-for-centos">install for centos</a></li>
+            <li><a href="#install-for-centos">Install for centos</a></li>
             <li><a href="#commands">Commands</a></li>
-            <li><a href="#dockerhub">dockerhub</a></li>
+            <li><a href="#terraform">Terraform</a></li>
+            <li><a href="#dockerhub">Dockerhub</a></li>
+            <li><a href="#dockerfile">Dockerfile</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
 <h1 id="docker">Docker</h1>
-<h2 id="install-for-centos">install for centos</h2>
+<h2 id="install-for-centos">Install for centos</h2>
+<p><strong>Install docker</strong></p>
 <pre><code>sudo yum -y update
 sudo yum -y install git docker docker-compose
 sudo groupadd docker
@@ -107,36 +110,30 @@ sudo gpasswd -a ${USER} docker
 sudo systemctl restart docker
 </code></pre>
 
-<h3 id="init-setting">init setting</h3>
-<p>delete sudo authority for docker cmd</p>
+<h3 id="init-setting">Init setting</h3>
+<p><strong>delete sudo authority for docker cmd</strong></p>
 <pre><code>sudo groupadd docker
-sudo gpasswd -a $USER docker
-
-exit
+sudo gpasswd -a ${USER} docker
 </code></pre>
 
 <h2 id="commands">Commands</h2>
-<p>copy</p>
-<pre><code>docker cp ${container_id}:${dir} ${output_dir}
+<p><strong>copy</strong></p>
+<pre><code>docker cp -r ${container_id}:${input} ${output}
 </code></pre>
 
-<p>prune unused containers and images</p>
-<pre><code>docker system prune
+<p><strong>run with mounting volumes</strong></p>
+<pre><code>docker run -v /home/hoge/shared:/shared -d -it ubuntu /bin/bash
 </code></pre>
 
-<p>run with mounting volumes</p>
-<pre><code>docker run -v /home/hoge/shared:/shared -d -i -t ubuntu /bin/bash
-</code></pre>
-
-<p>show <code>&lt;none&gt;</code> images</p>
+<p><strong>show <code>&lt;none&gt;</code> images</strong></p>
 <pre><code>docker images -f &quot;dangling=true&quot;
 </code></pre>
 
-<p>build with tag</p>
+<p><strong>build with tag</strong></p>
 <pre><code>docker build -t ${USER}/${tagname} .
 </code></pre>
 
-<p>delete</p>
+<p><strong>delete</strong></p>
 <pre><code>docker container prune
 docker volume prune
 docker image prune
@@ -144,20 +141,25 @@ docker network prune
 docker system prune --volumes
 </code></pre>
 
-<p>tag</p>
-<pre><code>docker pull ${USER}/image
-docker tag ${USER}/image ${USER}/image:1.0
-docker push ${USER}/image:1.0
+<p><strong>tag</strong></p>
+<pre><code>docker pull ${USER}/${image}
+docker tag ${USER}/${image} ${USER}/${image}:${tag}
+docker push ${USER}/${image}:${tag}
 </code></pre>
 
-<h3 id="terraform">terraform</h3>
+<h2 id="terraform">Terraform</h2>
+<p><strong>Use docker image</strong></p>
 <pre><code>docker run -it -v $PWD:/app -w /app hashicorp/terraform apply
 </code></pre>
 
-<h2 id="dockerhub">dockerhub</h2>
-<p>If the github repository has Dockerfile, the image automatelly is built on dockerhub</p>
-<h3 id="workdir">WORKDIR</h3>
-<p>default is /
+<h2 id="dockerhub">Dockerhub</h2>
+<ol>
+<li>puth image to dockerhub</li>
+<li>connect to github</li>
+<li>setting automated build</li>
+</ol>
+<h2 id="dockerfile">Dockerfile</h2>
+<p>default directory is /
 If workdir not exist, created automatelly.</p></div>
         </div>
 
