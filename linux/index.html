@@ -93,7 +93,7 @@
         <li class="main active"><a href="#linux">Linux</a></li>
             <li><a href="#makefile">Makefile</a></li>
             <li><a href="#vm-init-for-centos-7">VM init for CentOS 7</a></li>
-            <li><a href="#other">Other</a></li>
+            <li><a href="#commands">Commands</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
@@ -113,11 +113,11 @@ createsuperuser:
 
 <h2 id="vm-init-for-centos-7">VM init for CentOS 7</h2>
 <h3 id="copy-private-key-from-local-machine">Copy private key from local machine</h3>
-<pre><code>scp ~/.ssh/id_rsa ${target_machine}:~/.ssh/
+<pre><code class="shell">scp ~/.ssh/id_rsa ${target_machine}:~/.ssh/
 </code></pre>
 
 <h3 id="setting-swap">setting swap</h3>
-<pre><code>sudo dd if=/dev/zero of=/swapfile bs=1M count=1024
+<pre><code class="shell">sudo dd if=/dev/zero of=/swapfile bs=1M count=1024
 sudo chmod 600 /swapfile
 sudo mkswap /swapfile
 sudo swapon /swapfile
@@ -125,26 +125,53 @@ sudo sed -i '$ a /swapfile                                 swap                 
 </code></pre>
 
 <h3 id="update-yum-repository">update yum repository</h3>
-<pre><code>sudo yum update
+<pre><code class="shell">sudo yum update
 </code></pre>
 
-<h2 id="other">Other</h2>
-<p>show hardware info</p>
-<pre><code>dmidecode
+<h2 id="commands">Commands</h2>
+<p><strong>dmidecode</strong>
+show hardware info</p>
+<pre><code class="shell">dmidecode
 </code></pre>
 
-<p>grep without reg exspression</p>
-<pre><code>grep -F 'hoge' sample.txt
+<p><strong>grep</strong>
+without reg exspression</p>
+<pre><code class="shell">grep -F 'hoge' sample.txt
 fgrep 'hoge' sample.txt
 </code></pre>
 
-<p>vimdiff
-- do
-- dp
-- :wqa
-- :xa</p>
-<p>tree</p>
+<p><strong>vim</strong>
+start diff mode</p>
+<pre><code class="shell">vimdiff
+# or
+vim -d
+</code></pre>
+
+<p>commands</p>
+<pre><code>do # diff obtain
+dp # diff put
+:wqa # save all and finish
+:xa # save all and finish
+</code></pre>
+
+<p><strong>tree</strong></p>
 <pre><code>tree  --charset=C
+</code></pre>
+
+<p><strong>less</strong></p>
+<pre><code class="shell">less +F README.md LICENSE
+# ^C general mode
+# F  monitoring mode
+# :n move next file
+</code></pre>
+
+<p><strong>diff</strong></p>
+<pre><code class="shell">diff &lt;($cmd1) &lt;($cmd2)
+</code></pre>
+
+<p><strong>mdfind</strong>
+for MacOS command.</p>
+<pre><code class="shell">mdfind -onlyin . &quot;.md&quot;
 </code></pre></div>
         </div>
 
