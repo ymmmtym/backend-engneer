@@ -7,11 +7,11 @@
         
         
         
-        <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>python - Backend Engneer</title>
-        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="../css/font-awesome.min.css" rel="stylesheet">
-        <link href="../css/base.css" rel="stylesheet">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Git - Engneer Tutorial</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -19,8 +19,8 @@
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
 
-        <script src="../js/jquery-1.10.2.min.js" defer></script>
-        <script src="../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
@@ -39,7 +39,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="..">Backend Engneer</a>
+                    <a class="navbar-brand" href="../..">Engneer Tutorial</a>
                 </div>
 
                 <!-- Expanded navigation -->
@@ -47,30 +47,39 @@
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
                             <li >
-                                <a href="..">Home</a>
+                                <a href="../..">Home</a>
                             </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Table of contents <b class="caret"></b></a>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Backend <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li >
-    <a href="../linux">Linux</a>
+    <a href="../linux/">Linux</a>
+</li>
+                                    
+<li class="active">
+    <a href="./">Git</a>
 </li>
                                     
 <li >
-    <a href="../git">Git</a>
+    <a href="../docker/">Docker</a>
 </li>
                                     
 <li >
-    <a href="../docker">Docker</a>
+    <a href="../openstack/">Openstack</a>
 </li>
                                     
 <li >
-    <a href="../openstack">Openstack</a>
+    <a href="../python/">Python</a>
 </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Frontend <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
                                     
 <li >
-    <a href=".">Python</a>
+    <a href="../../frontend/sample/">Sample</a>
 </li>
                                 </ul>
                             </li>
@@ -82,6 +91,16 @@
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
+                            <li >
+                                <a rel="next" href="../linux/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../docker/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
                     </ul>
                 </div>
             </div>
@@ -90,24 +109,50 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#python">python</a></li>
-            <li><a href="#roles-of-__init__py">roles of __init__.py</a></li>
-            <li><a href="#modules">Modules</a></li>
+        <li class="main active"><a href="#git">Git</a></li>
+            <li><a href="#branch-model">branch model</a></li>
+            <li><a href="#opetation">opetation</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="python">python</h1>
-<h2 id="roles-of-__init__py">roles of <code>__init__.py</code></h2>
+<h1 id="git">Git</h1>
+<h2 id="branch-model">branch model</h2>
+<p>gitlab-flow</p>
 <ul>
-<li>show directory has python script</li>
-<li>initialize when import modules</li>
+<li>master(default、正常性確認)</li>
+<li>feature/hotfix</li>
+<li>pre-production(検証環境)</li>
+<li>production</li>
 </ul>
-<h2 id="modules">Modules</h2>
-<p><strong><strong>future</strong></strong>
-apply to ver2,3</p>
-<pre><code class="python">from __future__ import division, print_function, absolute_import, unicode_literals
-</code></pre></div>
+<h2 id="opetation">opetation</h2>
+<h3 id="init">init</h3>
+<pre><code>git checkout master
+git branch production
+git push -u origin production
+</code></pre>
+
+<h3 id="commit">commit</h3>
+<pre><code>git checkout master
+git pull
+git checkout -b feature/hoge
+
+git add .
+git commit -m &quot;${commit_msg}&quot;
+git push origin feature/hoge
+
+git checkout master
+git branch -d feature/hoge
+
+# same procedure for hotfix
+</code></pre>
+
+<h3 id="edit-commit">edit commit</h3>
+<pre><code>git reset --hard HEAD^
+git rebase -i ${commit_id}
+</code></pre>
+
+<p>https://www.google.com/amp/s/www.tam-tam.co.jp/tipsnote/program/post16686.html/amp</p></div>
         </div>
 
         <footer class="col-md-12">
@@ -115,11 +160,11 @@ apply to ver2,3</p>
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script>
-            var base_url = "..",
+            var base_url = "../..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="../js/base.js" defer></script>
-        <script src="../search/main.js" defer></script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
     <div class="modal-dialog">
