@@ -12,3 +12,4 @@ nav:
 
   - 'Frontend':
     - 'Sample': 'frontend/sample'
+    - 'JavaScript' 'frontendjavascript.md'
