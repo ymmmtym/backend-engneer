@@ -11,4 +11,4 @@ nav:
     - 'Python': 'backend/python.md'
 
   - 'Frontend':
-    - 'Sample': 'frontend/sample/index.html'
+    - 'Sample': 'frontend/sample'
