@@ -1,11 +1,14 @@
-site_name: 'Backend Engneer'
+site_name: 'Engneer Tutorial'
 
 nav:
   - 'Home': 'index.md'
 
-  - 'Table of contents':
-    - 'Linux': 'linux'
-    - 'Git': 'git'
-    - 'Docker': 'docker'
-    - 'Openstack': 'openstack'
-    - 'Python': 'python'
+  - 'Backend':
+    - 'Linux': 'backend/linux.md'
+    - 'Git': 'backend/git.md'
+    - 'Docker': 'backend/docker.md'
+    - 'Openstack': 'backend/openstack.md'
+    - 'Python': 'backend/python.md'
+
+  - 'Frontend':
+    - 'Sample': 'frontend/sample/index.html'
