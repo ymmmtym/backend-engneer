@@ -161,19 +161,19 @@ sudo sed -i '$ a /swapfile                                 swap                 
 </code></pre>
 
 <h2 id="commands">Commands</h2>
-<p><strong>dmidecode</strong>
-show hardware info</p>
+<h3 id="dmidecode">dmidecode</h3>
+<p>show hardware info</p>
 <pre><code class="shell">dmidecode
 </code></pre>
 
-<p><strong>grep</strong>
-without reg exspression</p>
+<h3 id="grep">grep</h3>
+<p>without reg exspression</p>
 <pre><code class="shell">grep -F 'hoge' sample.txt
 fgrep 'hoge' sample.txt
 </code></pre>
 
-<p><strong>vim</strong>
-start diff mode</p>
+<h3 id="vim">vim</h3>
+<p>start diff mode</p>
 <pre><code class="shell">vimdiff
 # or
 vim -d
@@ -186,27 +186,27 @@ dp # diff put
 :xa # save all and finish
 </code></pre>
 
-<p><strong>tree</strong></p>
+<h3 id="tree">tree</h3>
 <pre><code>tree  --charset=C
 </code></pre>
 
-<p><strong>less</strong></p>
+<h3 id="less">less</h3>
 <pre><code class="shell">less +F README.md LICENSE
 # ^C general mode
 # F  monitoring mode
 # :n move next file
 </code></pre>
 
-<p><strong>diff</strong></p>
+<h3 id="diff">diff</h3>
 <pre><code class="shell">diff &lt;($cmd1) &lt;($cmd2)
 </code></pre>
 
-<p><strong>find</strong></p>
+<h3 id="find">find</h3>
 <pre><code>find . -name &quot;.sh&quot; -type f exec chmod 755 {} +
 </code></pre>
 
-<p><strong>mdfind</strong>
-for MacOS command.</p>
+<h3 id="mdfind">mdfind</h3>
+<p>for MacOS command.</p>
 <pre><code class="shell">mdfind -onlyin . &quot;.md&quot;
 </code></pre></div>
         </div>
