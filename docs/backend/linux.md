@@ -33,21 +33,22 @@ sudo yum update
 ```
 
 ## Commands
-**dmidecode**
+### dmidecode
 show hardware info
 ```shell
 dmidecode
 ```
 
-**grep**
+### grep
 without reg exspression
 ```shell
 grep -F 'hoge' sample.txt
 fgrep 'hoge' sample.txt
 ```
 
-**vim**
+### vim
 start diff mode
+
 ```shell
 vimdiff
 # or
@@ -55,6 +56,7 @@ vim -d
 ```
 
 commands
+
 ```
 do # diff obtain
 dp # diff put
@@ -62,12 +64,12 @@ dp # diff put
 :xa # save all and finish
 ```
 
-**tree**
+### tree
 ```
 tree  --charset=C
 ```
 
-**less**
+### less
 ```shell
 less +F README.md LICENSE
 # ^C general mode
@@ -75,18 +77,19 @@ less +F README.md LICENSE
 # :n move next file
 ```
 
-**diff**
+### diff
 ```shell
 diff <($cmd1) <($cmd2)
 ```
 
-**find**
+### find
 ```
 find . -name ".sh" -type f exec chmod 755 {} +
 ```
 
-**mdfind**
+### mdfind
 for MacOS command.
+
 ```shell
 mdfind -onlyin . ".md"
 ```
