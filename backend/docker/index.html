@@ -134,38 +134,36 @@
 
 <h1 id="docker">Docker</h1>
 <h2 id="install-for-centos">Install for centos</h2>
-<p><strong>Install docker</strong></p>
+<h3 id="install-docker">Install docker</h3>
 <pre><code>sudo yum -y update
 sudo yum -y install git docker docker-compose
-sudo groupadd docker
+</code></pre>
+
+<h3 id="init-setting">Init setting</h3>
+<h4 id="add-sudo-authority-for-docker-cmd">add sudo authority for docker cmd</h4>
+<pre><code>sudo groupadd docker
 sudo gpasswd -a ${USER} docker
 sudo systemctl restart docker
 </code></pre>
 
-<h3 id="init-setting">Init setting</h3>
-<p><strong>delete sudo authority for docker cmd</strong></p>
-<pre><code>sudo groupadd docker
-sudo gpasswd -a ${USER} docker
-</code></pre>
-
 <h2 id="commands">Commands</h2>
-<p><strong>copy</strong></p>
+<h3 id="copy">copy</h3>
 <pre><code>docker cp -r ${container_id}:${input} ${output}
 </code></pre>
 
-<p><strong>run with mounting volumes</strong></p>
+<h3 id="run-with-mounting-volumes">run with mounting volumes</h3>
 <pre><code>docker run -v /home/hoge/shared:/shared -d -it ubuntu /bin/bash
 </code></pre>
 
-<p><strong>show <code>&lt;none&gt;</code> images</strong></p>
+<h3 id="show-ltnonegt-images">show <code>&lt;none&gt;</code> images</h3>
 <pre><code>docker images -f &quot;dangling=true&quot;
 </code></pre>
 
-<p><strong>build with tag</strong></p>
+<h3 id="build-with-tag">build with tag</h3>
 <pre><code>docker build -t ${USER}/${tagname} .
 </code></pre>
 
-<p><strong>delete</strong></p>
+<h3 id="delete">delete</h3>
 <pre><code>docker container prune
 docker volume prune
 docker image prune
@@ -173,14 +171,14 @@ docker network prune
 docker system prune --volumes
 </code></pre>
 
-<p><strong>tag</strong></p>
+<h3 id="tag">tag</h3>
 <pre><code>docker pull ${USER}/${image}
 docker tag ${USER}/${image} ${USER}/${image}:${tag}
 docker push ${USER}/${image}:${tag}
 </code></pre>
 
 <h2 id="terraform">Terraform</h2>
-<p><strong>Use docker image</strong></p>
+<h3 id="use-docker-image">Use docker image</h3>
 <pre><code>docker run -it -v $PWD:/app -w /app hashicorp/terraform apply
 </code></pre>
 
