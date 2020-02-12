@@ -8,7 +8,8 @@ nav:
     - 'Openstack': 'backend/openstack.md'
     - 'Python': 'backend/python.md'
   - 'Frontend':
-    - 'Sample': 'frontend/sample'
+    - 'Sites':
+      - 'Sample': 'frontend/sites/sample'
     - 'JavaScript': 'frontend/javascript.md'
   - 'Infra':
     - 'Juniper': 'infra/juniper.md'
