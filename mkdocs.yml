@@ -1,15 +1,14 @@
-site_name: 'Engneer Tutorial'
 nav:
-  - 'Home': 'index.md'
-  - 'Backend':
-    - 'Linux': 'backend/linux.md'
-    - 'Git': 'backend/git.md'
-    - 'Docker': 'backend/docker.md'
-    - 'Openstack': 'backend/openstack.md'
-    - 'Python': 'backend/python.md'
-  - 'Frontend':
-    - 'Sites':
-      - 'Sample': 'frontend/sites/sample'
-    - 'JavaScript': 'frontend/javascript.md'
-  - 'Infra':
-    - 'Juniper': 'infra/juniper.md'
+- Home: index.md
+- Backend:
+  - Docker: backend/docker.md
+  - Git: backend/git.md
+  - Linux: backend/linux.md
+  - Openstack: backend/openstack.md
+  - Python: backend/python.md
+- Frontend:
+  - Javascript: frontend/javascript.md
+  - Sample: frontend/sample
+- Infra:
+  - Juniper: infra/juniper.md
+site_name: Engneer Tutorial
