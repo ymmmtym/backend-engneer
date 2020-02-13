@@ -10,14 +10,14 @@ from jinja2 import Template, Environment, FileSystemLoader
 
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
-pwd = os.getcwd()
-title = pwd.split('/')[-1].replace('-',' ').title()
+data = yaml.safe_load(open("./templates/mkdocs.yml.base", "r+"))
+title = os.getcwd().split('/')[-1].replace('-',' ').title()
 docs_path = './docs/'
-os.chdir(docs_path)
 index = 'index.md'
 html = r"\.html$|\.css$|\.js$"
 pattern = r"\.md$"
 doc_dict = {}
+os.chdir(docs_path)
 
 
 def is_html(path):
@@ -50,11 +50,6 @@ for i in sorted(glob.glob('**', recursive=True)):
     create_dict(i)
   elif os.path.isdir(i):
     doc_dict[i.title()] = []
-
-data = {
-  "site_name": title,
-  "nav": [{'Home': index}]
-}
 
 for k,v in doc_dict.items():
   data["nav"].append({k: v})
