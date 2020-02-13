@@ -2,14 +2,13 @@
 ## branch model
 gitlab-flow
 
-- master(default、正常性確認)
+- master(default、CRUD)
 - feature/hotfix
-- pre-production(検証環境)
+- pre-production(Lab env)
 - production
 
 ## opetation
 ### init
-
 ```
 git checkout master
 git branch production
@@ -17,7 +16,6 @@ git push -u origin production
 ```
 
 ### commit
-
 ```
 git checkout master
 git pull
@@ -34,10 +32,15 @@ git branch -d feature/hoge
 ```
 
 ### edit commit
-
 ```
 git reset --hard HEAD^
 git rebase -i ${commit_id}
+```
+
+#### remove
+remove cache
+```
+git rm -r --cached ${file}
 ```
 
 
