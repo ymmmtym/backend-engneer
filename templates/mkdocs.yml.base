@@ -1,3 +1,15 @@
 site_name: Engneer Tutorial
+markdown_extensions:
+  - meta
+  - pymdownx.mark
+  - pymdownx.magiclink
+  - pymdownx.emoji
+  - fontawesome_markdown
+  - pymdownx.keys
+  - def_list
+  - admonition
+  - codehilite:
+      linenums: true
+      use_pygments: true
 nav:
 - Home: index.md
