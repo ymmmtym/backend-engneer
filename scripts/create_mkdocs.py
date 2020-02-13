@@ -51,8 +51,6 @@ for i in sorted(glob.glob('**', recursive=True)):
   elif os.path.isdir(i):
     doc_dict[i.title()] = []
 
-print(doc_dict)
-
 data = {
   "site_name": title,
   "nav": [{'Home': index}]
@@ -61,5 +59,5 @@ data = {
 for k,v in doc_dict.items():
   data["nav"].append({k: v})
 
-with open("../mkdocs.yaml", "w") as wf:
+with open("../mkdocs.yml", "w") as wf:
   yaml.dump(data, wf)
