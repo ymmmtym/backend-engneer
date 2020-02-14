@@ -14,13 +14,33 @@ tmux kill-server
 
 ## Prefix
 Prefix is ==++ctrl+++b== command.
+Controll tmux, type prefix and any following key.
 
+### Session
 |  Key  |  Action  |
 | ---- | ---- |
 |  :  |  prompt  |
 |  ?  |  show list of key bind  |
 |  s  |  select session  |
+|  d  |  detatche session  |
 |  $  |  rename current session  |
+
+### Window
+|  Key  |  Action  |
+| ---- | ---- |
+|  c  |  create new window  |
+|  w  |  show window list  |
+|  n  |  move next window  |
+|  p  |  move previous window  |
+
+### Pane
+|  Key  |  Action  |
+| ---- | ---- |
+|  %  |  split pane horizontally  |
+|  "  |  split pane vertically  |
+|  o  |  move next pane  |
+|  ;  |  move previous pane  |
+|  ++space++  |  change layout  |
 
 ## Config
 put file ==~/.tmux.conf== or ==/etc/tmux.conf==
