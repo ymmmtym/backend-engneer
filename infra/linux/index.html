@@ -32,11 +32,11 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.2">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.3">
     
     
       
-        <title>Docker - Engneer Tutorial</title>
+        <title>Linux - Engneer Tutorial</title>
       
     
     
@@ -83,7 +83,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#docker" tabindex="0" class="md-skip">
+      <a href="#linux" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -109,7 +109,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Docker
+                Linux
               
             </span>
           
@@ -176,7 +176,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../ansible/" class="md-tabs__link md-tabs__link--active">
+        <a href="../../backend/git/" class="md-tabs__link">
           Backend
         </a>
       
@@ -202,8 +202,21 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../infra/juniper/" class="md-tabs__link">
+        <a href="../ansible/" class="md-tabs__link md-tabs__link--active">
           Infra
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../network/juniper/" class="md-tabs__link">
+          Network
         </a>
       
     </li>
@@ -249,12 +262,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
     <label class="md-nav__link" for="nav-2">
       Backend
@@ -272,191 +283,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../ansible/" title="Ansible" class="md-nav__link">
-      Ansible
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-  
-
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Docker
-      </label>
-    
-    <a href="./" title="Docker" class="md-nav__link md-nav__link--active">
-      Docker
-    </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#install-for-centos" class="md-nav__link">
-    Install for centos
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#install-docker" class="md-nav__link">
-    Install docker
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#init-setting" class="md-nav__link">
-    Init setting
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#add-sudo-authority-for-docker-cmd" class="md-nav__link">
-    add sudo authority for docker cmd
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
-    Commands
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#copy" class="md-nav__link">
-    copy
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#run-with-mounting-volumes" class="md-nav__link">
-    run with mounting volumes
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#show-ltnonegt-images" class="md-nav__link">
-    show &amp;lt;none&amp;gt; images
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#build-with-tag" class="md-nav__link">
-    build with tag
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#delete" class="md-nav__link">
-    delete
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tag" class="md-nav__link">
-    tag
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#terraform" class="md-nav__link">
-    Terraform
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#use-docker-image" class="md-nav__link">
-    Use docker image
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dockerhub" class="md-nav__link">
-    Dockerhub
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dockerfile" class="md-nav__link">
-    Dockerfile
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../git/" title="Git" class="md-nav__link">
+    <a href="../../backend/git/" title="Git" class="md-nav__link">
       Git
     </a>
   </li>
@@ -468,31 +295,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../linux/" title="Linux" class="md-nav__link">
-      Linux
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../openstack/" title="Openstack" class="md-nav__link">
-      Openstack
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../python/" title="Python" class="md-nav__link">
+    <a href="../../backend/python/" title="Python" class="md-nav__link">
       Python
     </a>
   </li>
@@ -504,7 +307,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../tmux/" title="Tmux" class="md-nav__link">
+    <a href="../../backend/tmux/" title="Tmux" class="md-nav__link">
       Tmux
     </a>
   </li>
@@ -516,7 +319,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../vim/" title="Vim" class="md-nav__link">
+    <a href="../../backend/vim/" title="Vim" class="md-nav__link">
       Vim
     </a>
   </li>
@@ -579,10 +382,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     
     <label class="md-nav__link" for="nav-4">
       Infra
@@ -600,7 +405,244 @@
 
 
   <li class="md-nav__item">
-    <a href="../../infra/juniper/" title="Juniper" class="md-nav__link">
+    <a href="../ansible/" title="Ansible" class="md-nav__link">
+      Ansible
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../chef/" title="Chef" class="md-nav__link">
+      Chef
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../docker/" title="Docker" class="md-nav__link">
+      Docker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Linux
+      </label>
+    
+    <a href="./" title="Linux" class="md-nav__link md-nav__link--active">
+      Linux
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#makefile" class="md-nav__link">
+    Makefile
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vm-init-for-centos-7" class="md-nav__link">
+    VM init for CentOS 7
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#copy-private-key-from-local-machine" class="md-nav__link">
+    Copy private key from local machine
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-swap" class="md-nav__link">
+    setting swap
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-yum-repository" class="md-nav__link">
+    update yum repository
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commands" class="md-nav__link">
+    Commands
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dmidecode" class="md-nav__link">
+    dmidecode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grep" class="md-nav__link">
+    grep
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vim" class="md-nav__link">
+    vim
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tree" class="md-nav__link">
+    tree
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#less" class="md-nav__link">
+    less
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diff" class="md-nav__link">
+    diff
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#find" class="md-nav__link">
+    find
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mdfind" class="md-nav__link">
+    mdfind
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../openstack/" title="Openstack" class="md-nav__link">
+      Openstack
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../vagrant/" title="Vagrant" class="md-nav__link">
+      Vagrant
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Network
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Network
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../network/juniper/" title="Juniper" class="md-nav__link">
       Juniper
     </a>
   </li>
@@ -632,37 +674,38 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#install-for-centos" class="md-nav__link">
-    Install for centos
+  <a href="#makefile" class="md-nav__link">
+    Makefile
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vm-init-for-centos-7" class="md-nav__link">
+    VM init for CentOS 7
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#install-docker" class="md-nav__link">
-    Install docker
+  <a href="#copy-private-key-from-local-machine" class="md-nav__link">
+    Copy private key from local machine
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#init-setting" class="md-nav__link">
-    Init setting
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#add-sudo-authority-for-docker-cmd" class="md-nav__link">
-    add sudo authority for docker cmd
+  <a href="#setting-swap" class="md-nav__link">
+    setting swap
   </a>
   
 </li>
         
-      </ul>
-    </nav>
+          <li class="md-nav__item">
+  <a href="#update-yum-repository" class="md-nav__link">
+    update yum repository
+  </a>
   
 </li>
         
@@ -680,83 +723,63 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#copy" class="md-nav__link">
-    copy
+  <a href="#dmidecode" class="md-nav__link">
+    dmidecode
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#run-with-mounting-volumes" class="md-nav__link">
-    run with mounting volumes
+  <a href="#grep" class="md-nav__link">
+    grep
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#show-ltnonegt-images" class="md-nav__link">
-    show &amp;lt;none&amp;gt; images
+  <a href="#vim" class="md-nav__link">
+    vim
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#build-with-tag" class="md-nav__link">
-    build with tag
+  <a href="#tree" class="md-nav__link">
+    tree
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#delete" class="md-nav__link">
-    delete
+  <a href="#less" class="md-nav__link">
+    less
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#tag" class="md-nav__link">
-    tag
+  <a href="#diff" class="md-nav__link">
+    diff
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#find" class="md-nav__link">
+    find
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mdfind" class="md-nav__link">
+    mdfind
   </a>
   
 </li>
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#terraform" class="md-nav__link">
-    Terraform
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#use-docker-image" class="md-nav__link">
-    Use docker image
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dockerhub" class="md-nav__link">
-    Dockerhub
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dockerfile" class="md-nav__link">
-    Dockerfile
-  </a>
   
 </li>
       
@@ -777,83 +800,118 @@
               
                 
                 
-                <h1 id="docker">Docker</h1>
-<h2 id="install-for-centos">Install for centos</h2>
-<h3 id="install-docker">Install docker</h3>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">sudo yum -y update</span>
-<span class="err">sudo yum -y install git docker docker-compose</span>
-</code></pre></div>
-</td></tr></table>
-
-<h3 id="init-setting">Init setting</h3>
-<h4 id="add-sudo-authority-for-docker-cmd">add sudo authority for docker cmd</h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>sudo groupadd docker
-sudo gpasswd -a <span class="cp">${</span><span class="n">USER</span><span class="cp">}</span> docker
-sudo systemctl restart docker
-</code></pre></div>
-</td></tr></table>
-
-<h2 id="commands">Commands</h2>
-<h3 id="copy">copy</h3>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>docker cp -r <span class="cp">${</span><span class="n">container_id</span><span class="cp">}</span>:<span class="cp">${</span><span class="nb">input</span><span class="cp">}</span> <span class="cp">${</span><span class="n">output</span><span class="cp">}</span>
-</code></pre></div>
-</td></tr></table>
-
-<h3 id="run-with-mounting-volumes">run with mounting volumes</h3>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">docker run -v /home/hoge/shared:/shared -d -it ubuntu /bin/bash</span>
-</code></pre></div>
-</td></tr></table>
-
-<h3 id="show-ltnonegt-images">show <code>&lt;none&gt;</code> images</h3>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">docker images -f &quot;dangling=true&quot;</span>
-</code></pre></div>
-</td></tr></table>
-
-<h3 id="build-with-tag">build with tag</h3>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>docker build -t <span class="cp">${</span><span class="n">USER</span><span class="cp">}</span>/<span class="cp">${</span><span class="n">tagname</span><span class="cp">}</span> .
-</code></pre></div>
-</td></tr></table>
-
-<h3 id="delete">delete</h3>
+                <h1 id="linux">Linux</h1>
+<h2 id="makefile">Makefile</h2>
+<p>ex)</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
 4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">docker container prune</span>
-<span class="err">docker volume prune</span>
-<span class="err">docker image prune</span>
-<span class="err">docker network prune</span>
-<span class="err">docker system prune --volumes</span>
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="nf">makemigrations</span><span class="o">:</span>
+    docker-compose run --rm web python3 manage.py makemigrations
+
+<span class="nf">migrate</span><span class="o">:</span>
+    docker-compose run --rm web python3 manage.py migrate
+
+<span class="nf">createsuperuser</span><span class="o">:</span>
+    docker-compose run --rm web python3 manage.py createsuperuser
 </code></pre></div>
 </td></tr></table>
 
-<h3 id="tag">tag</h3>
+<h2 id="vm-init-for-centos-7">VM init for CentOS 7</h2>
+<h3 id="copy-private-key-from-local-machine">Copy private key from local machine</h3>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>scp ~/.ssh/id_rsa <span class="si">${</span><span class="nv">target_machine</span><span class="si">}</span>:~/.ssh/
+</code></pre></div>
+</td></tr></table>
+
+<h3 id="setting-swap">setting swap</h3>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>docker pull <span class="cp">${</span><span class="n">USER</span><span class="cp">}</span>/<span class="cp">${</span><span class="n">image</span><span class="cp">}</span>
-docker tag <span class="cp">${</span><span class="n">USER</span><span class="cp">}</span>/<span class="cp">${</span><span class="n">image</span><span class="cp">}</span> <span class="cp">${</span><span class="n">USER</span><span class="cp">}</span>/<span class="cp">${</span><span class="n">image</span><span class="cp">}</span>:<span class="cp">${</span><span class="n">tag</span><span class="cp">}</span>
-docker push <span class="cp">${</span><span class="n">USER</span><span class="cp">}</span>/<span class="cp">${</span><span class="n">image</span><span class="cp">}</span>:<span class="cp">${</span><span class="n">tag</span><span class="cp">}</span>
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>sudo dd <span class="k">if</span><span class="o">=</span>/dev/zero <span class="nv">of</span><span class="o">=</span>/swapfile <span class="nv">bs</span><span class="o">=</span>1M <span class="nv">count</span><span class="o">=</span><span class="m">1024</span>
+sudo chmod <span class="m">600</span> /swapfile
+sudo mkswap /swapfile
+sudo swapon /swapfile
+sudo sed -i <span class="s1">&#39;$ a /swapfile                                 swap                    swap    defaults        0 0&#39;</span> /etc/fstab
 </code></pre></div>
 </td></tr></table>
 
-<h2 id="terraform">Terraform</h2>
-<h3 id="use-docker-image">Use docker image</h3>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">docker run -it -v $PWD:/app -w /app hashicorp/terraform apply</span>
+<h3 id="update-yum-repository">update yum repository</h3>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>sudo yum update
 </code></pre></div>
 </td></tr></table>
 
-<h2 id="dockerhub">Dockerhub</h2>
-<ol>
-<li>puth image to dockerhub</li>
-<li>connect to github</li>
-<li>setting automated build</li>
-</ol>
-<h2 id="dockerfile">Dockerfile</h2>
-<p>default directory is /
-If workdir not exist, created automatelly.</p>
+<h2 id="commands">Commands</h2>
+<h3 id="dmidecode">dmidecode</h3>
+<p>show hardware info</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>dmidecode
+</code></pre></div>
+</td></tr></table>
+
+<h3 id="grep">grep</h3>
+<p>without reg exspression</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>grep -F <span class="s1">&#39;hoge&#39;</span> sample.txt
+fgrep <span class="s1">&#39;hoge&#39;</span> sample.txt
+</code></pre></div>
+</td></tr></table>
+
+<h3 id="vim">vim</h3>
+<p>start diff mode</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>vimdiff
+<span class="c1"># or</span>
+vim -d
+</code></pre></div>
+</td></tr></table>
+
+<p>commands</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">do # diff obtain</span>
+<span class="err">dp # diff put</span>
+<span class="err">:wqa # save all and finish</span>
+<span class="err">:xa # save all and finish</span>
+</code></pre></div>
+</td></tr></table>
+
+<h3 id="tree">tree</h3>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">tree  --charset=C</span>
+</code></pre></div>
+</td></tr></table>
+
+<h3 id="less">less</h3>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>less +F README.md LICENSE
+<span class="c1"># ^C general mode</span>
+<span class="c1"># F  monitoring mode</span>
+<span class="c1"># :n move next file</span>
+</code></pre></div>
+</td></tr></table>
+
+<h3 id="diff">diff</h3>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>diff &lt;<span class="o">(</span><span class="nv">$cmd1</span><span class="o">)</span> &lt;<span class="o">(</span><span class="nv">$cmd2</span><span class="o">)</span>
+</code></pre></div>
+</td></tr></table>
+
+<h3 id="find">find</h3>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">find . -name &quot;.sh&quot; -type f exec chmod 755 {} +</span>
+</code></pre></div>
+</td></tr></table>
+
+<h3 id="mdfind">mdfind</h3>
+<p>for MacOS command.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>mdfind -onlyin . <span class="s2">&quot;.md&quot;</span>
+</code></pre></div>
+</td></tr></table>
                 
                   
                 
@@ -875,7 +933,7 @@ If workdir not exist, created automatelly.</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../ansible/" title="Ansible" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../docker/" title="Docker" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -884,19 +942,19 @@ If workdir not exist, created automatelly.</p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Ansible
+                Docker
               </span>
             </div>
           </a>
         
         
-          <a href="../git/" title="Git" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../openstack/" title="Openstack" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Git
+                Openstack
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
