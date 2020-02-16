@@ -3,7 +3,10 @@ name: github pages
 on:
   push:
     branches:
-    - master
+      - master
+  pull_request:
+    branches:
+      - master
 
 jobs:
   build-deploy:
@@ -34,3 +37,4 @@ jobs:
         PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
         PUBLISH_BRANCH: gh-pages
         PUBLISH_DIR: ./site
+      if: github.event_name == 'push'
