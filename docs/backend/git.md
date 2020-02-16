@@ -44,4 +44,6 @@ git rm -r --cached ${file}
 ```
 
 
+## Reference
+https://github.com/github/gitignore
 https://www.google.com/amp/s/www.tam-tam.co.jp/tipsnote/program/post16686.html/amp
