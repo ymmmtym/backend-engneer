@@ -65,3 +65,6 @@ docker run -it -v $PWD:/app -w /app hashicorp/terraform apply
 ## Dockerfile
 default directory is /
 If workdir not exist, created automatelly.
+
+## Play with Docker
+https://labs.play-with-docker.com/
