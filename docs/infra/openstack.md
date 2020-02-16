@@ -1,16 +1,53 @@
 # Openstack
-## show uploaded image list
+Openstack provides IaaS service ans Cloud environment.
 
+## RabbitMQ
+## DB
+## Keystone
+### Commands
 ```
-openstack image list
-cinder image-list
+openstack quota show admin
+openstack quota set --cores 8 admin
 ```
 
-## create user
+### Commands
+#### Project
+|  Command  |  Action  |
+| ---- | ---- |
+|  openstack help project  |  show commands about project  |
 
-```
-openstack user create opcel
-openstack user set --password secret opcel
-openstack project create proj01
-openstack role add --user opcel --project proj01 member
-```
+#### User
+|  Command  |  Action  |
+| ---- | ---- |
+|  openstack help user  |  show commands about user  |
+
+#### Role
+|  Command  |  Action  |
+| ---- | ---- |
+|  openstack help role  |  show commands about role  |
+
+## Glance
+### Commands
+|  Command  |  Action  |
+| ---- | ---- |
+|  openstack help image  |  show commands about image  |
+
+## Neutron
+### Commands
+#### Floating IP
+|  Command  |  Action  |
+| ---- | ---- |
+|  openstack help ip floating  |  show commands about floating ip  |
+
+#### Security Group
+|  Command  |  Action  |
+| ---- | ---- |
+|  openstack help security  |  show commands about security group  |
+
+## Nova
+## Horizon
+## Cinder
+## Swift
+## Heat
+## Ironic
+## Magnum
