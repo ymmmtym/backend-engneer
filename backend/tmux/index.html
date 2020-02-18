@@ -412,6 +412,19 @@
     Config
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sample" class="md-nav__link">
+    Sample
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
       
@@ -695,6 +708,19 @@
     Config
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sample" class="md-nav__link">
+    Sample
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
       
@@ -828,18 +854,8 @@ Controll tmux, type prefix and any following key.</p>
 </table>
 <h2 id="config">Config</h2>
 <p>put file <mark>~/.tmux.conf</mark> or <mark>/etc/tmux.conf</mark></p>
-<p>sample</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">set -g mouse off</span>
-<span class="err">bind-key -n WheelUpPane if-shell -F -t = &quot;#{mouse_any_flag}&quot; &quot;send-keys -M&quot; &quot;if -Ft= &#39;#{pane_in_mode}&#39; &#39;send-keys -M&#39; &#39;select-pane -t=; copy-mode -e; send</span>
-<span class="err">-keys -M&#39;&quot;</span>
-<span class="err">bind-key -n WheelDownPane select-pane -t= \; send-keys -M</span>
-<span class="err">setw -g mode-keys vi</span>
-</code></pre></div>
-</td></tr></table>
+<h3 id="sample">Sample</h3>
+<p><script src="https://gist-it.appspot.com/https://github.com/ymmmtym/ansible-mgmt/raw/master/roles/common/files/dotfiles/.tmux.conf"></script></p>
                 
                   
                 
