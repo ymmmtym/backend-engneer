@@ -898,10 +898,10 @@ vim -d
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">do # diff obtain</span>
-<span class="err">dp # diff put</span>
-<span class="err">:wqa # save all and finish</span>
-<span class="err">:xa # save all and finish</span>
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="k">do</span> <span class="c1"># diff obtain</span>
+dp <span class="c1"># diff put</span>
+:wqa <span class="c1"># save all and finish</span>
+:xa <span class="c1"># save all and finish</span>
 </code></pre></div>
 </td></tr></table>
 
@@ -927,7 +927,7 @@ vim -d
 </td></tr></table>
 
 <h3 id="find">find</h3>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">find . -name &quot;.sh&quot; -type f exec chmod 755 {} +</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>find . -name <span class="s2">&quot;.sh&quot;</span> -type f <span class="nb">exec</span> chmod <span class="m">755</span> <span class="o">{}</span> +
 </code></pre></div>
 </td></tr></table>
 

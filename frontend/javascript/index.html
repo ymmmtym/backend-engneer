@@ -83,7 +83,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#javascript" tabindex="0" class="md-skip">
+      <a href="#javascriptes6" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -408,16 +408,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#es6" class="md-nav__link">
-    es6
+  <a href="#points" class="md-nav__link">
+    Points
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    変数宣言の種類
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#type-of-variable-declaration" class="md-nav__link">
+    Type of variable declaration
   </a>
   
     <nav class="md-nav">
@@ -448,31 +447,26 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    スコープ
+      
+        <li class="md-nav__item">
+  <a href="#scope" class="md-nav__link">
+    scope
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    グローバル変数
+  <a href="#global-variables" class="md-nav__link">
+    global variables
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    ローカル変数
+  <a href="#local-variables" class="md-nav__link">
+    local variables
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -662,16 +656,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#es6" class="md-nav__link">
-    es6
+  <a href="#points" class="md-nav__link">
+    Points
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    変数宣言の種類
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#type-of-variable-declaration" class="md-nav__link">
+    Type of variable declaration
   </a>
   
     <nav class="md-nav">
@@ -702,31 +695,26 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    スコープ
+      
+        <li class="md-nav__item">
+  <a href="#scope" class="md-nav__link">
+    scope
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    グローバル変数
+  <a href="#global-variables" class="md-nav__link">
+    global variables
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    ローカル変数
+  <a href="#local-variables" class="md-nav__link">
+    local variables
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -752,66 +740,65 @@
               
                 
                 
-                <h1 id="javascript">JavaScript</h1>
-<h2 id="es6">es6</h2>
+                <h1 id="javascriptes6">JavaScript(ES6)</h1>
+<h2 id="points">Points</h2>
 <ul>
-<li>アロー関数</li>
-<li>定数のスコープ</li>
-<li>コンストラクタのoverride</li>
-<li>デフォルトエクスポート、名前付きエクスポート</li>
-<li>forEach,find,filter,mapメソッド</li>
+<li>arrow function</li>
+<li>constant scope</li>
+<li>constructor override</li>
+<li>default export, named export</li>
+<li>forEach, find, filter, map method</li>
 </ul>
-<h3 id="_1">変数宣言の種類</h3>
-<p>javascriptにおける変数宣言の方法は以下の3つ</p>
+<h2 id="type-of-variable-declaration">Type of variable declaration</h2>
+<p>There are three ways to declare variables in javascript.</p>
 <ul>
 <li>var</li>
 <li>let</li>
 <li>const</li>
 </ul>
-<h4 id="var">var</h4>
+<h3 id="var">var</h3>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">var</span> <span class="n">hoge_var</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
-<span class="n">var</span> <span class="n">hoge_var</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span> <span class="o">//</span><span class="err">再宣言可能</span>
-
-<span class="n">hoge_var</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">;</span> <span class="o">//</span><span class="err">再代入可能</span>
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">var</span> <span class="nx">hoge_var</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">hoge_var</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span> <span class="c1">// redeclarable</span>
+ 
+<span class="nx">hoge_var</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">;</span> <span class="c1">// reassignable</span>
 </code></pre></div>
 </td></tr></table>
 
-<h4 id="let">let</h4>
+<h3 id="let">let</h3>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">let</span> <span class="n">hoge_let</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
-<span class="n">let</span> <span class="n">hoge_let</span> <span class="o">=</span> <span class="mi">200</span><span class="p">;</span> <span class="o">//</span><span class="err">再宣言できない</span>
-
-<span class="n">hoge_let</span> <span class="o">=</span> <span class="mi">2000</span><span class="p">;</span> <span class="o">//</span><span class="err">再代入可能</span>
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">let</span> <span class="nx">hoge_let</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">hoge_let</span> <span class="o">=</span> <span class="mi">200</span><span class="p">;</span> <span class="c1">// cannot be redeclared</span>
+ 
+<span class="nx">hoge_let</span> <span class="o">=</span> <span class="mi">2000</span><span class="p">;</span> <span class="c1">// reassignable</span>
 </code></pre></div>
 </td></tr></table>
 
-<h4 id="const">const</h4>
+<h3 id="const">const</h3>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">const</span> <span class="n">test_const</span> <span class="o">=</span> <span class="mi">30</span><span class="p">;</span>
-<span class="n">const</span> <span class="n">test_const</span> <span class="o">=</span> <span class="mi">300</span><span class="p">;</span> <span class="o">//</span><span class="err">再宣言できない</span>
-
-<span class="n">test_const</span> <span class="o">=</span> <span class="mi">3000</span><span class="p">;</span> <span class="o">//</span><span class="err">再代入できない</span>
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kr">const</span> <span class="nx">test_const</span> <span class="o">=</span> <span class="mi">30</span><span class="p">;</span>
+<span class="kr">const</span> <span class="nx">test_const</span> <span class="o">=</span> <span class="mi">300</span><span class="p">;</span> <span class="c1">// cannot be redeclared</span>
+ 
+<span class="nx">test_const</span> <span class="o">=</span> <span class="mi">3000</span><span class="p">;</span> <span class="c1">// cannot be reassigned</span>
 </code></pre></div>
 </td></tr></table>
 
-<h3 id="_2">スコープ</h3>
+<h2 id="scope">scope</h2>
 <ul>
-<li>グローバル変数</li>
-<li>ローカル変数</li>
+<li>global variables</li>
+<li>local variables</li>
 </ul>
-<h4 id="_3">グローバル変数</h4>
-<p>グローバル変数はどこからでもアクセスできてしまうので、
-他の変数との競合を引き起こしやすい。
-その為、エラーになったり想定通りの出力がされない場合がある。</p>
-<h4 id="_4">ローカル変数</h4>
-<p>for文や関数の中だけで使う変数</p>
+<h3 id="global-variables">global variables</h3>
+<p>Since global variables can be accessed from anywhere, it is easy to cause conflict with other variables.
+Therefore, an error may occur or the output may not be performed as expected.</p>
+<h3 id="local-variables">local variables</h3>
+<p>Variables used only in for statements and functions</p>
                 
                   
                 
