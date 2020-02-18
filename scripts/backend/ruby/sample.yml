@@ -1,12 +1,11 @@
-# 改行コードはunix系にする
+# Set line feed code to LF
 ---
 # emails
 - hoge@gmail.com
-- yumemo@gmail.com
 
 ---
-# scalar_data(block style)
-- yumemo # str
+# scalar_data (block style)
+- ymmmtym # str
 - 555 # int
 - true # bool
 - null # null
@@ -16,88 +15,86 @@
 
 ---
 # sequence
-- [yumemo, 555, true, null, 2090-55-00, "true", '777']
+- [ymmmtym, 555, true, null, 2090-55-00, "true", '777']
 
--
+- 
   - b-1
-  - b-2
+  - b-2
 - c
 
 ---
 # hash data
-name : yumemo
+name: ymmmtym
 score: 50
 
 names1:
-  - yumemo
-  - neko
+   - ymmmtym
+   - neko
 scores1:
-  - 50
-  - 80
+   - 50
+   - 80
 
-names2: [yumemo, neko]
+names2: [ymmmtym, neko]
 scores2: [50, 80]
 
 ---
-# 改行・スペースの表現
-
-## 各行に改行
+# Line feed / space expression
+## New line feed at each line
 - |
-  this
-  is
-  a
-  pen
+  this
+  is
+  a
+  pen
 
-## 各行に改行+最終行
+## New line feed for each line and next line
 - |+
-  this
-  is
-  a
-  pen
+  this
+  is
+  a
+  pen
 
-## 各行に改行-最終行
+## New line feed for each line without last line
 - |-
-  this
-  is
-  a
-  pen
+  this
+  is
+  a
+  pen
 
-
-# スペースの表現
+# Expression of space
 - >
-  this
-  is
-  a
-  pen
+  this
+  is
+  a
+  pen
 
 
 - >+
-  this
-  is
-  a
-  pen
+  this
+  is
+  a
+  pen
 
 - >-
-  this
-  is
-  a
-  pen
+  this
+  is
+  a
+  pen
 
 ---
-- &y yumemo # anchor
+- &y ymmmtym # anchor
 - *y # alias
 - &x mr.x
 - *x
 
 ---
 common: &common
-  user: yumemo
-  passwd: hogehoge
+   user: ymmmtym
+   passwd: hogehoge
 
 development:
-  database: yumemodb
-  <<: *common
+   database: devdb
+   <<: * common
 
 production:
-  database: mydb
-  <<: *common
+   database: proddb
+   <<: * common

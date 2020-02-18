@@ -13,7 +13,7 @@ $array = array(
 // encode array to json
 $json = json_encode( $array , JSON_PRETTY_PRINT|JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES ) ;
 
-echo "$json\n\n";
+// echo "$json";
 /* output
 {
   "name": "ymmmtym",
