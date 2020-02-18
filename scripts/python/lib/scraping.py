@@ -1,14 +1,11 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
 import requests
 import os
 import sys
 from bs4 import BeautifulSoup
 
 
-def scraping(site):
-  r = requests.get(site)
+def scraping(url):
+  r = requests.get(url)
   text = r.text
   content = r.content
   soup = BeautifulSoup(content, 'html.parser')
