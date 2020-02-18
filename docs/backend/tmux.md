@@ -45,12 +45,5 @@ Controll tmux, type prefix and any following key.
 ## Config
 put file ==~/.tmux.conf== or ==/etc/tmux.conf==
 
-sample
-```
-set -g mouse off
-bind-key -n WheelUpPane if-shell -F -t = "#{mouse_any_flag}" "send-keys -M" "if -Ft= '#{pane_in_mode}' 'send-keys -M' 'select-pane -t=; copy-mode -e; send
--keys -M'"
-bind-key -n WheelDownPane select-pane -t= \; send-keys -M
-setw -g mode-keys vi
-
-```
+### Sample
+<script src="https://gist-it.appspot.com/https://github.com/ymmmtym/ansible-mgmt/raw/master/roles/common/files/dotfiles/.tmux.conf"></script>
