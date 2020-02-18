@@ -4,6 +4,6 @@
 
 fun main(atgs: Array<String>) {
   /* val msg: String = "Hello World" */
-  val msg = "Hello World"; //型推論
+  val msg = "Hello World"; // Type inference
   println(msg)
 }
