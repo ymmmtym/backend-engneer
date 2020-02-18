@@ -12,4 +12,4 @@ from __future__ import division, print_function, absolute_import, unicode_litera
 ```
 
 ## Samples
-<script src="https://gist-it.appspot.com/https://github.com/ymmmtym/engneer-tutorial/blob/master/scripts/python/lib/scraping.py"></script>
+<script src="https://gist-it.appspot.com/https://github.com/ymmmtym/engneer-tutorial/blob/master/scripts/backend/python/lib/scraping.py"></script>
