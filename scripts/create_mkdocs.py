@@ -1,12 +1,9 @@
-# -*- coding: utf-8 -*-
-
 import os
 import glob
 import re
 import sys
 import io
 import yaml
-from jinja2 import Template, Environment, FileSystemLoader
 
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
