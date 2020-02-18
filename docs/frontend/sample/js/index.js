@@ -1,12 +1,12 @@
-// メソッド
+// method
 
 alert("Hello Front End Engneer Site")
 
-var input = window.prompt("あなたの名前を入力して下さい")
+var input = window.prompt("Put your name !")
 
 if (input != ""){
   var userElem = document.getElementById("user_name")
-  userElem.innerText = `ようこそ${input}さん`
+  userElem.innerText = `Welcome ${input}`
 }
 
 let getRandomUserEmail = () => {

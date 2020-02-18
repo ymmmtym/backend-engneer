@@ -5,5 +5,5 @@
     return (str_replace($subject, $replace, $str));
   }
 
-  echo (replace("会社名・会社名・会社名・会社名・"));
+  echo (replace("company・company・company・company・"));
 ?>

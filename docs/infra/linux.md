@@ -57,7 +57,7 @@ vim -d
 
 commands
 
-```
+```shell
 do # diff obtain
 dp # diff put
 :wqa # save all and finish
@@ -83,7 +83,7 @@ diff <($cmd1) <($cmd2)
 ```
 
 ### find
-```
+```shell
 find . -name ".sh" -type f exec chmod 755 {} +
 ```
 

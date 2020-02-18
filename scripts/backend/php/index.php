@@ -34,7 +34,7 @@
               }
           }
           echo '</ul>'."\n";
-	  echo '<a href="' . $_SERVER['HTTP_REFERER'] . '">前に戻る</a>';
+	  echo '<a href="' . $_SERVER['HTTP_REFERER'] . '">Back</a>';
         ?>
   </body>
 </html>
