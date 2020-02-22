@@ -1,13 +1,13 @@
 #include <stdio.h>
 
 void f(void) {
-  static int a = 0; // 静的変数
+  static int a = 0; // static
   a++;
   printf("a:%d\n", a);
 }
 
 void g(void) {
-  int b= 0; // 自動変数
+  int b= 0; // auto
   b++;
   printf("b:%d\n", b);
 }

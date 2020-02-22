@@ -1,8 +1,5 @@
 #include <stdio.h>
 
-// if文
-
-
 int main(void) {
   int score = 80;
 

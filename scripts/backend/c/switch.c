@@ -1,10 +1,9 @@
 #include <stdio.h>
 
-// switch文
+// switch
 
 int main(void) {
   static int rank = 7;
-  // 静的変数：宣言は最初の１回のみ適用される
 
   switch(rank){
     case 1:

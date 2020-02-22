@@ -1,12 +1,5 @@
 #include <stdio.h>
 
-// 変数:データにつけるラベル
-
-// データ型
-// int:整数 %d
-// float:実数 %f
-// char:文字 %c
-
 int main(void) {
   int x = 10;
   float y = 5.2;

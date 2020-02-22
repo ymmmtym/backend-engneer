@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// 配列
+// array
 
 int main(void) {
   int sales[3];

@@ -1,8 +1,6 @@
 #include <stdio.h>
 
 
-// 値渡し
-
 void f(long a) {
   a += 100;
   printf("%ld\n", a);
