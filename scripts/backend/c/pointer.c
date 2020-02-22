@@ -2,7 +2,7 @@
 
 
 int main(void) {
-  printf("count of memory space int type occupying: %d\n", sizeof(int));
+  printf("count of memory space int type occupying: %zu\n", sizeof(int));
 
   int a;
   a = 10;
