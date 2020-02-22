@@ -11,7 +11,7 @@ def factrial(x):
 
 
 if __name__ == '__main__':
-  a = int(input("xを入力してください（x!を求める）:"))
+  a = int(input("put number then print factorial:"))
   start = time.time()  # start time
   print ("{0}!={1}".format(a,factrial(a)))
   elapsed_time = time.time() - start  # end time

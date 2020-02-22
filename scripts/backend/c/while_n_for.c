@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-//while
+// while
 
 int main (void){
   int m = 0;
@@ -9,7 +9,6 @@ int main (void){
     m++;
   }
 
-// do...while処理はあと判定なので、条件に合致しなくても最低１回は実行される
   int n = 0;
   do{
     printf("n: %d\n", n);

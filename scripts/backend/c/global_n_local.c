@@ -1,11 +1,10 @@
 #include <stdio.h>
 
-// 変数の有効範囲
 
-int a = 10; // グローバル変数
+int a = 10; // global
 
 void f(void) {
-  // ローカル変数
+  // local
   int a = 1;
   a++;
   printf("[local]a: %d\n", a);

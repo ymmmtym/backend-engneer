@@ -1,8 +1,6 @@
 #include <stdio.h>
 
 
-// 参照渡し
-
 void f(long *pa) {
   *pa += 100;
   printf("%ld\n", *pa);
