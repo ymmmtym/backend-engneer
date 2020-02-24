@@ -35,7 +35,7 @@ sudo yum update
 ## Terminal
 |Key|Action|
 ----|-------
-|__alt__+f,b|move word by word|
+|++alt+f,b++|move word by word|
 
 
 ## Commands
@@ -85,7 +85,7 @@ less +F README.md LICENSE
 
 ### diff
 ```shell
-diff <($cmd1) <($cmd2)
+diff <(${cmd1}) <(${cmd2})
 ```
 
 ### find
