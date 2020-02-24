@@ -11,5 +11,8 @@ apply to ver2,3
 from __future__ import division, print_function, absolute_import, unicode_literals
 ```
 
+## Reference
+[Python Docs](https://docs.python.org/3/)
+
 ## Samples
 <script src="https://gist-it.appspot.com/https://github.com/ymmmtym/engneer-tutorial/blob/master/scripts/backend/python/lib/scraping.py"></script>
