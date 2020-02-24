@@ -35,7 +35,7 @@ sudo yum update
 ## Terminal
 |Key|Action|
 ----|-------
-|++alt+f,b++|move word by word|
+|++alt+++f,b|move word by word|
 
 
 ## Commands
