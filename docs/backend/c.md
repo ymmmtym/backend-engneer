@@ -1,4 +1,4 @@
-# C language
+# C
 ## Compile
 ```bash
 gcc -o hello hello.c
