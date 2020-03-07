@@ -32,6 +32,12 @@ sudo sed -i '$ a /swapfile                                 swap                 
 sudo yum update
 ```
 
+## Terminal
+|Key|Action|
+----|-------
+|++alt+++f,b|move word by word|
+
+
 ## Commands
 ### dmidecode
 show hardware info
@@ -40,7 +46,7 @@ dmidecode
 ```
 
 ### grep
-without reg exspression
+without reg expression
 ```shell
 grep -F 'hoge' sample.txt
 fgrep 'hoge' sample.txt
@@ -79,7 +85,7 @@ less +F README.md LICENSE
 
 ### diff
 ```shell
-diff <($cmd1) <($cmd2)
+diff <(${cmd1}) <(${cmd2})
 ```
 
 ### find

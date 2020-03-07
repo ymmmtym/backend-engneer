@@ -69,5 +69,8 @@ notebook=notebook.ipynb
 jupyter nbconvert --to html ${notebook}
 ```
 
+## Reference
+[Python Docs](https://docs.python.org/3/)
+
 ## Samples
 <script src="https://gist-it.appspot.com/https://github.com/ymmmtym/engneer-tutorial/blob/master/scripts/backend/python/lib/scraping.py"></script>
