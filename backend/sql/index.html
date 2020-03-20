@@ -36,7 +36,7 @@
     
     
       
-        <title>Tmux - Engneer Tutorial</title>
+        <title>Sql - Engneer Tutorial</title>
       
     
     
@@ -83,7 +83,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#tmux" tabindex="0" class="md-skip">
+      <a href="#sql" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -109,7 +109,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Tmux
+                Sql
               
             </span>
           
@@ -343,18 +343,6 @@
           
           
 
-
-  <li class="md-nav__item">
-    <a href="../sql/" title="Sql" class="md-nav__link">
-      Sql
-    </a>
-  </li>
-
-        
-          
-          
-          
-
   
 
 
@@ -366,11 +354,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Tmux
+        Sql
       </label>
     
-    <a href="./" title="Tmux" class="md-nav__link md-nav__link--active">
-      Tmux
+    <a href="./" title="Sql" class="md-nav__link md-nav__link--active">
+      Sql
     </a>
     
       
@@ -384,64 +372,37 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#requirements" class="md-nav__link">
-    Requirements
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#commands" class="md-nav__link">
     Commands
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#prefix" class="md-nav__link">
-    Prefix
-  </a>
-  
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#session" class="md-nav__link">
-    Session
+  <a href="#select" class="md-nav__link">
+    Select
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#window" class="md-nav__link">
-    Window
+  <a href="#insert" class="md-nav__link">
+    Insert
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#pane" class="md-nav__link">
-    Pane
+  <a href="#update" class="md-nav__link">
+    Update
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#config" class="md-nav__link">
-    Config
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#sample" class="md-nav__link">
-    Sample
+  <a href="#delete" class="md-nav__link">
+    Delete
   </a>
   
 </li>
@@ -459,6 +420,18 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tmux/" title="Tmux" class="md-nav__link">
+      Tmux
+    </a>
   </li>
 
         
@@ -692,64 +665,37 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#requirements" class="md-nav__link">
-    Requirements
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#commands" class="md-nav__link">
     Commands
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#prefix" class="md-nav__link">
-    Prefix
-  </a>
-  
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#session" class="md-nav__link">
-    Session
+  <a href="#select" class="md-nav__link">
+    Select
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#window" class="md-nav__link">
-    Window
+  <a href="#insert" class="md-nav__link">
+    Insert
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#pane" class="md-nav__link">
-    Pane
+  <a href="#update" class="md-nav__link">
+    Update
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#config" class="md-nav__link">
-    Config
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#sample" class="md-nav__link">
-    Sample
+  <a href="#delete" class="md-nav__link">
+    Delete
   </a>
   
 </li>
@@ -776,122 +722,63 @@
               
                 
                 
-                <h1 id="tmux">Tmux</h1>
-<h2 id="requirements">Requirements</h2>
-<ul>
-<li>tmux &gt; 3.0</li>
-</ul>
+                <h1 id="sql">SQL</h1>
 <h2 id="commands">Commands</h2>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>tmux new -s <span class="si">${</span><span class="nv">session</span><span class="si">}</span>
-tmux ls
-tmux lsc
-tmux a -t <span class="si">${</span><span class="nv">session</span><span class="si">}</span>
-tmux kill-session -t <span class="si">${</span><span class="nv">session</span><span class="si">}</span>
-tmux kill-server
+<h3 id="select">Select</h3>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">item</span><span class="p">;</span>
+<span class="k">SELECT</span> <span class="n">test</span><span class="o">-</span><span class="n">id</span> <span class="k">AS</span> <span class="n">id</span> <span class="p">,</span><span class="n">test</span><span class="o">-</span><span class="n">name</span> <span class="k">AS</span> <span class="n">name</span> <span class="k">FROM</span> <span class="n">item</span><span class="p">;</span>
+
+<span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">item</span> <span class="k">LEFT</span> <span class="k">OUTER</span> <span class="k">JOIN</span> <span class="n">cotegory</span> <span class="k">ON</span> <span class="n">item</span><span class="p">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">category</span><span class="p">.</span><span class="n">id</span><span class="p">;</span>
+
+<span class="k">SELECT</span> <span class="k">count</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">item</span><span class="p">;</span>
+
+<span class="k">SELECT</span> <span class="k">distinct</span> <span class="n">id</span> <span class="k">FROM</span> <span class="n">item</span><span class="p">;</span>
+
+<span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">item</span> <span class="k">WHERE</span> <span class="n">price</span> <span class="o">&gt;=</span> <span class="mi">1000</span> <span class="k">and</span> <span class="n">category</span> <span class="o">=</span> <span class="s1">&#39;furniture&#39;</span><span class="p">;</span>
+<span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">item</span> <span class="k">WHERE</span> <span class="n">price</span> <span class="k">in</span> <span class="p">(</span><span class="mi">1000</span><span class="p">,</span><span class="mi">3000</span><span class="p">);</span>
+<span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">item</span> <span class="k">WHERE</span> <span class="n">name</span> <span class="k">LIKE</span> <span class="s1">&#39;%desk&#39;</span><span class="p">;</span>
+
+<span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">item</span> <span class="k">WHERE</span> <span class="n">id</span> <span class="k">IS</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">;</span>
+
+<span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">item</span> <span class="k">ORDER</span> <span class="k">BY</span> <span class="n">price</span> <span class="k">DESC</span><span class="p">;</span>
+
+<span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">item</span> <span class="k">INNER</span> <span class="k">JOIN</span> <span class="n">account</span> <span class="k">ON</span> <span class="n">item</span><span class="p">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">account</span><span class="p">.</span><span class="n">history</span><span class="p">;</span>
 </code></pre></div>
 </td></tr></table>
 
-<h2 id="prefix">Prefix</h2>
-<p>Prefix is <mark><span class="keys"><kbd class="key-control">Ctrl</kbd></span>+b</mark> command.
-Controll tmux, type prefix and any following key.</p>
-<h3 id="session">Session</h3>
-<table>
-<thead>
-<tr>
-<th>Key</th>
-<th>Action</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>:</td>
-<td>prompt</td>
-</tr>
-<tr>
-<td>?</td>
-<td>show list of key bind</td>
-</tr>
-<tr>
-<td>s</td>
-<td>select session</td>
-</tr>
-<tr>
-<td>d</td>
-<td>detatche session</td>
-</tr>
-<tr>
-<td>$</td>
-<td>rename current session</td>
-</tr>
-</tbody>
-</table>
-<h3 id="window">Window</h3>
-<table>
-<thead>
-<tr>
-<th>Key</th>
-<th>Action</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>c</td>
-<td>create new window</td>
-</tr>
-<tr>
-<td>w</td>
-<td>show window list</td>
-</tr>
-<tr>
-<td>n</td>
-<td>move next window</td>
-</tr>
-<tr>
-<td>p</td>
-<td>move previous window</td>
-</tr>
-</tbody>
-</table>
-<h3 id="pane">Pane</h3>
-<table>
-<thead>
-<tr>
-<th>Key</th>
-<th>Action</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>%</td>
-<td>split pane horizontally</td>
-</tr>
-<tr>
-<td>"</td>
-<td>split pane vertically</td>
-</tr>
-<tr>
-<td>o</td>
-<td>move next pane</td>
-</tr>
-<tr>
-<td>;</td>
-<td>move previous pane</td>
-</tr>
-<tr>
-<td><span class="keys"><kbd class="key-space">Space</kbd></span></td>
-<td>change layout</td>
-</tr>
-</tbody>
-</table>
-<h2 id="config">Config</h2>
-<p>put file <mark>~/.tmux.conf</mark> or <mark>/etc/tmux.conf</mark></p>
-<h3 id="sample">Sample</h3>
-<p><script src="https://gist-it.appspot.com/https://github.com/ymmmtym/ansible-mgmt/raw/master/roles/common/files/dotfiles/.tmux.conf"></script></p>
+<h3 id="insert">Insert</h3>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">INSERT INTO item(id, name) VALUES(5, &#39;chair&#39;);</span>
+</code></pre></div>
+</td></tr></table>
+
+<h3 id="update">Update</h3>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">UPDATE item SET price = 2000 WHERE price = 1500;</span>
+</code></pre></div>
+</td></tr></table>
+
+<h3 id="delete">Delete</h3>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">DELETE FROM item;</span>
+<span class="err">DELETE FROM item WHERE price &lt;= 500;</span>
+</code></pre></div>
+</td></tr></table>
                 
                   
                 
@@ -913,7 +800,7 @@ Controll tmux, type prefix and any following key.</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../sql/" title="Sql" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../python/" title="Python" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -922,19 +809,19 @@ Controll tmux, type prefix and any following key.</p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Sql
+                Python
               </span>
             </div>
           </a>
         
         
-          <a href="../vim/" title="Vim" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../tmux/" title="Tmux" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Vim
+                Tmux
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
