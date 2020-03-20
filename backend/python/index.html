@@ -361,14 +361,48 @@
       
         <li class="md-nav__item">
   <a href="#roles-of-__init__py" class="md-nav__link">
-    roles of __init__.py
+    Roles of __init__.py
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#class" class="md-nav__link">
+    Class
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    Methods
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#special-methods" class="md-nav__link">
+    Special methods
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#modules" class="md-nav__link">
     Modules
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jupiter" class="md-nav__link">
+    Jupiter
   </a>
   
 </li>
@@ -629,14 +663,48 @@
       
         <li class="md-nav__item">
   <a href="#roles-of-__init__py" class="md-nav__link">
-    roles of __init__.py
+    Roles of __init__.py
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#class" class="md-nav__link">
+    Class
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    Methods
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#special-methods" class="md-nav__link">
+    Special methods
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#modules" class="md-nav__link">
     Modules
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jupiter" class="md-nav__link">
+    Jupiter
   </a>
   
 </li>
@@ -672,16 +740,98 @@
               
                 
                 
-                <h1 id="python">python</h1>
-<h2 id="roles-of-__init__py">roles of <code>__init__.py</code></h2>
+                <h1 id="python">Python</h1>
+<h2 id="roles-of-__init__py">Roles of <code>__init__.py</code></h2>
 <ul>
 <li>show directory has python script</li>
 <li>initialize when import modules</li>
 </ul>
+<h2 id="class">Class</h2>
+<p>By describing "class: Meta", you can define something that is not defined in forms.ModelForm.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">MessageForm</span><span class="p">(</span><span class="n">forms</span><span class="o">.</span><span class="n">ModelForm</span><span class="p">):</span>
+    <span class="k">class</span> <span class="nc">Meta</span><span class="p">:</span>
+        <span class="n">model</span> <span class="o">=</span> <span class="n">Message</span>
+        <span class="n">fields</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;owner&#39;</span><span class="p">,</span><span class="s1">&#39;group&#39;</span><span class="p">,</span><span class="s1">&#39;content&#39;</span><span class="p">]</span>
+
+<span class="k">class</span> <span class="nc">CreateGroupForm</span><span class="p">(</span><span class="n">forms</span><span class="o">.</span><span class="n">Form</span><span class="p">):</span>
+    <span class="n">group_name</span> <span class="o">=</span> <span class="n">forms</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+
+<h2 id="methods">Methods</h2>
+<h3 id="special-methods">Special methods</h3>
+<ul>
+<li><strong>init</strong></li>
+<li><strong>str</strong></li>
+<li><strong>bool</strong></li>
+</ul>
+<p>etc..</p>
+<p><strong>init</strong> is used in the first variable definition.
+For str etc., when the function str () is called, you can specify the value to return as follows.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">User</span><span class="p">():</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
+
+    <span class="k">def</span> <span class="nf">say_hello</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, my name is &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;name:&quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">+</span> <span class="s2">&quot; age:&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__bool__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="kc">True</span>
+
+
+<span class="n">user</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="s2">&quot;hoge&quot;</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<span class="nb">str</span><span class="p">(</span><span class="n">user</span><span class="p">)</span>
+<span class="c1"># &#39;name:hoge age:20&#39;</span>
+
+<span class="nb">bool</span><span class="p">(</span><span class="n">user</span><span class="p">)</span>
+<span class="c1"># True</span>
+</code></pre></div>
+</td></tr></table>
+
 <h2 id="modules">Modules</h2>
 <p><strong><strong>future</strong></strong>
 apply to ver2,3</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">division</span><span class="p">,</span> <span class="n">print_function</span><span class="p">,</span> <span class="n">absolute_import</span><span class="p">,</span> <span class="n">unicode_literals</span>
+</code></pre></div>
+</td></tr></table>
+
+<h2 id="jupiter">Jupiter</h2>
+<p>convert notebook to html</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="nv">notebook</span><span class="o">=</span>notebook.ipynb
+jupyter nbconvert --to html <span class="si">${</span><span class="nv">notebook</span><span class="si">}</span>
 </code></pre></div>
 </td></tr></table>
 
