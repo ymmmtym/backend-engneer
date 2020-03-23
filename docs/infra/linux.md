@@ -99,3 +99,9 @@ for MacOS command.
 ```shell
 mdfind -onlyin . ".md"
 ```
+
+### ssh
+ssh rsa key generate
+```shell
+ssh-keygen -t rsa -f ~/.ssh/id_rsa -N ""
+```
