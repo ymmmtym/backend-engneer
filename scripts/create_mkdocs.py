@@ -7,7 +7,7 @@ import yaml
 
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
-data = yaml.safe_load(open("./templates/mkdocs.yml.base", "r+"))
+data = yaml.safe_load(open("./templates/mkdocs.base.yml", "r+"))
 title = os.getcwd().split('/')[-1].replace('-',' ').title()
 docs_path = './docs/'
 index = 'index.md'
