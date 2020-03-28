@@ -19,6 +19,10 @@
     <h1>Front End Engneer</h1>
     <h2 id="user_name">Welcome</h2>
     <p>This site is sample for front end engneer and gets update sometimes.</p>
+
+    <h3>Date &amp; Time</h3>
+    <p id="date"></p>
+    <p id="time"></p>
     
     <h3>Source Code List</h3>
     <ul class="list-group">
@@ -50,5 +54,14 @@
 
   </main>
   <script src="./js/index.js"></script>
+  <script src="./js/date.js"></script>
+  <script>
+    time();
+    function time(){
+      var now = new Date();
+      document.getElementById("time").innerHTML = now.toLocaleTimeString();
+    }
+    setInterval('time()',1000);
+  </script>
 </body>
 </html>
