@@ -1,7 +1,7 @@
-# Engneer-tutorial
+# Roadmap
 ![github pages](https://github.com/ymmmtym/engneer-tutorial/workflows/github%20pages/badge.svg?branch=master)
 
-<https://ymmmtym.com/engneer-tutorial>
+<https://ymmmtym.com/roadmap>
 
 ## Usage
 
@@ -10,7 +10,7 @@
 activate python3 env
 
 ```bash=
-git clone git@github.com:ymmmtym/engneer-tutorial.git
+git clone git@github.com:ymmmtym/roadmap.git
 cd engneer-tutorial
 python3 -m venv --clear .venv
 . .venv/bin/activate
